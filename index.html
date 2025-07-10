@@ -3,31 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mon Premier Site</title>
+  <title>Yugenwear – Boutique</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Bienvenue sur mon site !</h1>
+    <div class="logo">Yugenwear</div>
     <nav>
       <a href="#">Accueil</a>
-      <a href="#">À propos</a>
-      <a href="#">Contact</a>
+       <a href="#presentation">Présentation</a>
+      <a href="#">Boutique</a>
+      <a href="#collection" class="cta">Découvrir la collection</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Présentation</h2>
-      <p>Ceci est un exemple de site web simple créé avec HTML, CSS et JavaScript.</p>
-      <button onclick="direBonjour()">Clique-moi !</button>
-    </section>
-  </main>
+
+  <section class="hero">
+    <h1>Exprime ton style, sans compromis.</h1>
+    <p>Des vêtements urbains et élégants pour toutes les envies.</p>
+    <a href="#nouveautes" class="cta">Découvrir la collection</a>
+  </section>
+
+<section id="presentation" class="presentation-yugen">
+  <h2>🌿 Présentation de YugenWear</h2>
+  <p>Chez <strong>YugenWear</strong>, nous croyons en une mode qui a du sens. Inspirée du concept japonais de <em>“yūgen”</em>, qui évoque la beauté profonde, mystérieuse et subtile, notre marque incarne une vision élégante et responsable de la mode urbaine.</p>
+
+  <h3>♻️ Notre philosophie</h3>
+  <ul>
+    <li>Durable avant tout : matériaux naturels, recyclés ou biosourcés</li>
+    <li>Éthique & locale : ateliers engagés et transparents</li>
+    <li>Minimalisme affirmé : coupes nettes, tons sobres, textures parlantes</li>
+  </ul>
+
+  <h3>👕 Ce que propose YugenWear</h3>
+  <ul>
+    <li>T-shirts en coton bio ultra doux</li>
+    <li>Hoodies et sweats en polyester recyclé</li>
+    <li>Accessoires sans cuir ni plastique</li>
+  </ul>
+
+  <h3>🌎 Impact positif</h3>
+  <ul>
+    <li>Reforestation via Hexa Gear</li>
+    <li>Économie circulaire & zéro déchet</li>
+    <li>Éducation à la consommation responsable</li>
+  </ul>
+
+  <h3
+
+  <section id="nouveautes" class="section">
+    <h2>Nouveautés</h2>
+    <div class="grid-produits">
+      <!-- Ajoute ici tes cartes produits -->
+    </div>
+  </section>
+
+  <section class="categories section">
+    <h2>Nos Catégories</h2>
+    <div class="categories-lien">
+      <a href="#">👕 Homme</a>
+      <a href="#">🧢 Accessoires</a>
+    </div>
+  </section>
+
+  <section class="engagements section">
+    <h2>Nos Engagements</h2>
+    <ul>
+      <li>Livraison rapide et suivie</li>
+      <li>Paiement sécurisé (Stripe / PayPal)</li>
+      <li>SAV réactif 7j/7</li>
+    </ul>
+  </section>
+
+<section id="collection" class="collection-produits">
+  <h2>🛍️ Notre Collection</h2>
+  <div class="grille-produits">
+    <div class="produit-item">
+      <h3>T-shirt Yugen</h3>
+      <p>29,90 €</p>
+      <button onclick="ajouterAuPanier('T-shirt Yugen', 29.9)">Ajouter au panier</button>
+    </div>
+    <div class="produit-item">
+      <h3>Hoodie Yugen</h3>
+      <p>59,90 €</p>
+      <button onclick="ajouterAuPanier('Hoodie Yugen', 59.9)">Ajouter au panier</button>
+    </div>
+    <div class="produit-item">
+      <h3>Sweat Yugen</h3>
+      <p>49,90 €</p>
+      <button onclick="ajouterAuPanier('Sweat Yugen', 49.9)">Ajouter au panier</button>
+    </div>
+    <div class="produit-item">
+      <h3>Jogging Yugen</h3>
+      <p>45,00 €</p>
+      <button onclick="ajouterAuPanier('Jogging Yugen', 45)">Ajouter au panier</button>
+    </div>
+    <div class="produit-item">
+      <h3>Casquette Yugen</h3>
+      <p>19,90 €</p>
+      <button onclick="ajouterAuPanier('Casquette Yugen', 19.9)">Ajouter au panier</button>
+    </div>
+  </div>
+</section>
+
 
   <footer>
-    <p>&copy; 2025 Mon Site Web</p>
+    <p>© 2025 Yugenwear • La mode vous appartient.</p>
+   — ✉ yugenwear.contact@gmail.com</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+<section id="contact" class="contact-yugen">
+  <h2>📞 Nous contacter</h2>
+  <p>Une question sur un produit, un retour, ou une collaboration ? L’équipe YugenWear est à votre écoute.</p>
+
+  <ul>
+    <li><strong>✉️ Email :</strong> yugenwear.contact@gmail.com</li>
+  </ul>
+
+  <h3>📬 Laisser un message</h3>
+  <form onsubmit="envoyerContact(event)">
+    <input type="text" placeholder="Votre nom" required />
+    <input type="email" placeholder="Votre email" required />
+    <textarea placeholder="Votre message..." required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
