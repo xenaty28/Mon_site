@@ -245,6 +245,7 @@ html {
   text-decoration: underline;
 }
 
+
 .collection-produits {
   padding: 50px 20px;
   background-color: #fefdf8;
@@ -295,4 +296,11 @@ html {
 
 .produit-item button:hover {
   background-color: #a22c3d;
+}
+
+
+img {
+  width: 100%;
+  height: 300px; /* ou une valeur fixe */
+  object-fit: fill;
 }
