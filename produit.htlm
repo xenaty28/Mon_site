@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Détail du produit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>Détail du produit</h1></header>
+  <main id="details"></main>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nom = params.get("nom");
+    const prix = params.get("prix");
+    const image = params.get("image");
+
+    document.getElementById("details").innerHTML = `
+      <div class="produit">
+        <img src="images/${image}" alt="${nom}" />
+        <h2>${nom}</h2>
+        <p>${prix} €</p>
+        <button onclick="ajouterAuPanier('${nom}', ${prix})">Ajouter au panier</button>
+        <a href="index.html">← Retour</a>
+      </div>
+    `;
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
