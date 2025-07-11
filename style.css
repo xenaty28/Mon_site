@@ -3,8 +3,8 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #fcfcfc;
-  color: #222;
+  background-color: #070707;
+  color: #0d0d0d;
 }
 
 header {
@@ -12,8 +12,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #111;
-  color: white;
+  background-color: #070707;
+  color: rgb(243, 240, 240);
 }
 
 header .logo {
@@ -23,7 +23,7 @@ header .logo {
 
 nav a {
   margin: 0 12px;
-  color: white;
+  color: rgb(249, 246, 246);
   text-decoration: none;
   font-weight: 500;
 }
@@ -33,7 +33,7 @@ nav a {
   background-size: cover;
   padding: 120px 20px;
   text-align: center;
-  color: white;
+  color: rgb(252, 251, 251);
 }
 
 .hero h1 {
@@ -304,3 +304,4 @@ img {
   height: 300px; /* ou une valeur fixe */
   object-fit: fill;
 }
+
