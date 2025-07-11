@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Connexion / Création de compte</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>Espace Client</h1></header>
+
+  <main class="auth-container">
+    <section class="form-block">
+      <h2>🔓 Connexion</h2>
+      <form onsubmit="connecter(event)">
+        <label>Email :</label>
+        <input type="email" id="emailConnect" required />
+
+        <label>Mot de passe :</label>
+        <input type="password" id="mdpConnect" required />
+
+        <button type="submit">Se connecter</button>
+      </form>
+    </section>
+
+    <section class="form-block">
+      <h2>🆕 Créer un compte</h2>
+      <form onsubmit="creerCompte(event)">
+        <label>Email :</label>
+        <input type="email" id="emailCreate" required />
+
+        <label>Mot de passe :</label>
+        <input type="password" id="mdpCreate" required />
+
+        <button type="submit">Créer mon compte</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Style Urbain – Sécurité & simplicité.</p>
+  </footer>
+
+  <script>
+    // Stockage fictif en localStorage
+    function connecter(e) {
+      e.preventDefault();
+      const email = document.getElementById("emailConnect").value;
+      const mdp = document.getElementById("mdpConnect").value;
+      const comptes = JSON.parse(localStorage.getItem("comptes")) || [];
+
+      const existe = comptes.find(c => c.email === email && c.mdp === mdp);
+      if (existe) {
+        alert("Bienvenue " + email);
+        localStorage.setItem("connecte", "true");
+        window.location.href = "index.html";
+      } else {
+        alert("Email ou mot de passe incorrect.");
+      }
+    }
+
+    function creerCompte(e) {
+      e.preventDefault();
+      const email = document.getElementById("emailCreate").value;
+      const mdp = document.getElementById("mdpCreate").value;
+      let comptes = JSON.parse(localStorage.getItem("comptes")) || [];
+
+      if (comptes.find(c => c.email === email)) {
+        alert("Ce compte existe déjà !");
+        return;
+      }
+
+      comptes.push({ email, mdp });
+      localStorage.setItem("comptes", JSON.stringify(comptes));
+      alert("Compte créé avec succès !");
+    }
+  </script>
+</body>
+</html>
