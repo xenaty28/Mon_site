@@ -1,43 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fcfcfc;
+  color: #222;
 }
 
 header {
-  background-color: #007acc;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
-  text-align: center;
+  background-color: #111;
+  color: white;
+}
+
+header .logo {
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
 nav a {
+  margin: 0 12px;
   color: white;
-  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  background: url('images/banner.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 120px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #d23f57;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.grid-produits {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.categories-lien a {
+  margin: 0 15px;
+  font-size: 1.2em;
+  color: #d23f57;
+  font-weight: 600;
   text-decoration: none;
 }
 
-main {
-  padding: 20px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #007acc;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #005fa3;
+.engagements ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1em;
 }
 
 footer {
-  background-color: #222;
+  background-color: #111;
   color: white;
   text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9em;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.form-block {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.form-block h2 {
+  margin-bottom: 15px;
+  color: #d23f57;
+}
+
+input {
+  width: 100%;
   padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #d23f57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #a22c3d;
+}
+
+.logo-reduit {
+  width: 120px;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.contact-yugen {
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 60px auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+.contact-yugen h2, .contact-yugen h3 {
+  color: #d23f57;
+}
+
+.contact-yugen ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.contact-yugen li {
+  margin-bottom: 10px;
+  font-size: 1.05em;
+}
+
+.contact-yugen a {
+  color: #d23f57;
+  text-decoration: none;
+}
+
+.contact-yugen form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-yugen input,
+.contact-yugen textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact-yugen button {
+  background-color: #d23f57;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-yugen button:hover {
+  background-color: #a22c3d;
+}
+
+.presentation-yugen {
+  background-color: #f2f2ed;
+  color: #2a2a2a;
+  font-family: 'Montserrat', sans-serif;
+  padding: 60px 30px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 60px auto;
+  line-height: 1.7;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.presentation-yugen h2 {
+  font-size: 2em;
+  color: #1c1c1c;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.presentation-yugen h3 {
+  margin-top: 40px;
+  font-size: 1.4em;
+  color: #d23f57;
+}
+
+.presentation-yugen p {
+  font-size: 1.05em;
+  margin-bottom: 20px;
+}
+
+.presentation-yugen ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.presentation-yugen li::before {
+  content: "🌿";
+  margin-right: 10px;
+  color: #72b480;
+}
+
+.presentation-yugen a {
+  color: #d23f57;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.presentation-yugen a:hover {
+  text-decoration: underline;
+}
+
+.collection-produits {
+  padding: 50px 20px;
+  background-color: #fefdf8;
+  text-align: center;
+}
+
+.collection-produits h2 {
+  color: #d23f57;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.grille-produits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.produit-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.produit-item h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.produit-item p {
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.produit-item button {
+  background-color: #d23f57;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.produit-item button:hover {
+  background-color: #a22c3d;
 }
